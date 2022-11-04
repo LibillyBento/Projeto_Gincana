@@ -42,7 +42,7 @@ public class UsuarioController {
 
 	@PostMapping
 	public UsuarioModel insert (@RequestBody UsuarioModel usuario) {
-	UsuarioModel result = repository.save(UsuarioModel);
+	UsuarioModel result = repository.save(usuario);
 	return result;
 }
 
@@ -55,7 +55,7 @@ public class UsuarioController {
 	@PutMapping("/{id}")
 	public ResponseEntity<UsuarioModel> update(@PathVariable Long id, @RequestBody UsuarioModel usuarioModel) {
 	var p = repository.findById(id);
-	
+
     if (p.isPresent()) {
         var usuario = p.get();
 

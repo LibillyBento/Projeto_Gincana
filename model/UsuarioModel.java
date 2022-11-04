@@ -21,29 +21,29 @@ public class UsuarioModel {
 
 			@Id
 			@GeneratedValue(strategy = GenerationType.IDENTITY)
-			
+
 			@Column(name = "idUsuario")
 			private long idUsuario;
-			
+
 			@Column(name = "nomeUsuario", nullable = false, unique = true)
 			private String nomeUsuario;
-			
+
 			@Column(name = "emailUsuario", nullable = true)
 			private String emailUsuario;
-			
+
 			@Column(name = "senhaUsuario", nullable = true)
 			private String senhaUsuario;
-			
+
 			@Column(name = "cpfUsuario", nullable = true)
 			private String cpfUsuario;
-			
+
 			@Column(name = "sexoUsuario", nullable = true)
 			private String sexoUsuario;
-			
+
 			@Column(name = "idGincana", nullable = true)
 			private Gincana idGincana;
 
-			
+
 			public UsuarioModel() {
 
 			}
@@ -137,7 +137,5 @@ public class UsuarioModel {
 						+ emailUsuario + ", senhaUsuario=" + senhaUsuario + ", cpfUsuario=" + cpfUsuario
 						+ ", sexoUsuario=" + sexoUsuario + "]";
 			}
-			
-}
 
-			
+}

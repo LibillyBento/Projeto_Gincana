@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import br.edu.ifba.gincana.model.UsuarioModel;
 
 public interface UsuarioRepository extends JpaRepository <UsuarioModel, Long>  {
-	
+
 
 }
