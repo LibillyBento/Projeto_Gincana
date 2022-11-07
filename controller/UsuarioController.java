@@ -59,20 +59,20 @@ public class UsuarioController {
     if (p.isPresent()) {
         var usuario = p.get();
 
-        if (usuarioModel.getNomeUsuario() != null)
-        	usuario.setNomeUsuario(usuarioModel.getNomeUsuario());
+        if (usuarioModel.getNome_Usuario() != null)
+        	usuario.setNome_Usuario(usuarioModel.getNome_Usuario());
 
-        if (usuarioModel.getEmailUsuario() != null)
-        	usuario.setEmailUsuario(usuarioModel.getEmailUsuario());
+        if (usuarioModel.getEmail_Usuario() != null)
+        	usuario.setEmail_Usuario(usuarioModel.getEmail_Usuario());
 
-        if (usuarioModel.getSenhaUsuario() != null)
-        	usuario.setSenhaUsuario(usuarioModel.getSenhaUsuario());
+        if (usuarioModel.getSenha_Usuario() != null)
+        	usuario.setSenha_Usuario(usuarioModel.getSenha_Usuario());
 
-        if (usuarioModel.getCpfUsuario() != null )
-        	usuario.setCpfUsuario(usuarioModel.getCpfUsuario());
-
-        if (usuarioModel.getSexoUsuario() != null)
-        	usuario.setSexoUsuario(usuarioModel.getSenhaUsuario());
+        if (usuarioModel.getSexo_Usuario() != null)
+        	usuario.setSexo_Usuario(usuarioModel.getSenha_Usuario());
+        
+        if (usuarioModel.getData_de_Cadastro() != null)
+        	usuarioModel.setData_de_Cadastro(usuarioModel.getData_de_Cadastro());
 
         repository.save(usuario);
         return ResponseEntity.ok(usuario);

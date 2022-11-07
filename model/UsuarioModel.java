@@ -15,127 +15,115 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "usuario")
+@Table(name = "Usuario")
 
 public class UsuarioModel {
 
 			@Id
 			@GeneratedValue(strategy = GenerationType.IDENTITY)
 
-			@Column(name = "idUsuario")
-			private long idUsuario;
+			@Column(name = "id_Usuario")
+			private long id_Usuario;
 
-			@Column(name = "nomeUsuario", nullable = false, unique = true)
-			private String nomeUsuario;
+			@Column(name = "nome_Usuario", nullable = false)
+			private String nome_Usuario;
 
-			@Column(name = "emailUsuario", nullable = true)
-			private String emailUsuario;
+			@Column(name = "email_Usuario", nullable = true)
+			private String email_Usuario;
 
-			@Column(name = "senhaUsuario", nullable = true)
-			private String senhaUsuario;
+			@Column(name = "senha_Usuario", nullable = true)
+			private String senha_Usuario;
 
-			@Column(name = "cpfUsuario", nullable = true)
-			private String cpfUsuario;
+			@Column(name = "sexo_Usuario", nullable = true)
+			private String sexo_Usuario;
+			
+			@Column(name = "data_de_Cadastro", nullable = true)
+			private Date data_de_Cadastro;
 
-			@Column(name = "sexoUsuario", nullable = true)
-			private String sexoUsuario;
+			@Column(name = "id_Gincana")
+			private long id_Gincana ;
 
-			@Column(name = "idGincana", nullable = true)
-			private Gincana idGincana;
+			//	@Column(name = "id_Equipe")
+			//	private long id_Equipe;
 
-
+			
 			public UsuarioModel() {
-
+		
 			}
 
-
-			public UsuarioModel(long idUsuario, String nomeUsuario, String emailUsuario, String senhaUsuario,
-					String cpfUsuario, String sexoUsuario, Gincana idGincana) {
-				this.idUsuario = idUsuario;
-				this.nomeUsuario = nomeUsuario;
-				this.emailUsuario = emailUsuario;
-				this.senhaUsuario = senhaUsuario;
-				this.cpfUsuario = cpfUsuario;
-				this.sexoUsuario = sexoUsuario;
-				this.idGincana = idGincana;
+			public UsuarioModel(long id_Usuario, String nome_Usuario, String email_Usuario, String senha_Usuario,
+					String sexo_Usuario, Date data_de_Cadastro, long id_Gincana) {
+				this.id_Usuario = id_Usuario;
+				this.nome_Usuario = nome_Usuario;
+				this.email_Usuario = email_Usuario;
+				this.senha_Usuario = senha_Usuario;
+				this.sexo_Usuario = sexo_Usuario;
+				this.data_de_Cadastro = data_de_Cadastro;
+				this.id_Gincana = id_Gincana;
 			}
 
-
-			public long getIdUsuario() {
-				return idUsuario;
+			public long getId_Usuario() {
+				return id_Usuario;
 			}
 
-
-			public void setIdUsuario(long idUsuario) {
-				this.idUsuario = idUsuario;
+			public void setId_Usuario(long id_Usuario) {
+				this.id_Usuario = id_Usuario;
 			}
 
-
-			public String getNomeUsuario() {
-				return nomeUsuario;
+			public String getNome_Usuario() {
+				return nome_Usuario;
 			}
 
-
-			public void setNomeUsuario(String nomeUsuario) {
-				this.nomeUsuario = nomeUsuario;
+			public void setNome_Usuario(String nome_Usuario) {
+				this.nome_Usuario = nome_Usuario;
 			}
 
-
-			public String getEmailUsuario() {
-				return emailUsuario;
+			public String getEmail_Usuario() {
+				return email_Usuario;
 			}
 
-
-			public void setEmailUsuario(String emailUsuario) {
-				this.emailUsuario = emailUsuario;
+			public void setEmail_Usuario(String email_Usuario) {
+				this.email_Usuario = email_Usuario;
 			}
 
-
-			public String getSenhaUsuario() {
-				return senhaUsuario;
+			public String getSenha_Usuario() {
+				return senha_Usuario;
 			}
 
-
-			public void setSenhaUsuario(String senhaUsuario) {
-				this.senhaUsuario = senhaUsuario;
+			public void setSenha_Usuario(String senha_Usuario) {
+				this.senha_Usuario = senha_Usuario;
 			}
 
-
-			public String getCpfUsuario() {
-				return cpfUsuario;
+			public String getSexo_Usuario() {
+				return sexo_Usuario;
 			}
 
-
-			public void setCpfUsuario(String cpfUsuario) {
-				this.cpfUsuario = cpfUsuario;
+			public void setSexo_Usuario(String sexo_Usuario) {
+				this.sexo_Usuario = sexo_Usuario;
 			}
 
-
-			public String getSexoUsuario() {
-				return sexoUsuario;
+			public Date getData_de_Cadastro() {
+				return data_de_Cadastro;
 			}
 
-
-			public void setSexoUsuario(String sexoUsuario) {
-				this.sexoUsuario = sexoUsuario;
+			public void setData_de_Cadastro(Date data_de_Cadastro) {
+				this.data_de_Cadastro = data_de_Cadastro;
 			}
 
-
-			public Gincana getIdGincana() {
-				return idGincana;
+			public long getId_Gincana() {
+				return id_Gincana;
 			}
 
-
-			public void setIdGincana(Gincana idGincana) {
-				this.idGincana = idGincana;
+			public void setId_Gincana(long id_Gincana) {
+				this.id_Gincana = id_Gincana;
 			}
-
 
 			@Override
 			public String toString() {
-				return "GincanaModel [idUsuario=" + idUsuario + ", nomeUsuario=" + nomeUsuario + ", emailUsuario="
-						+ emailUsuario + ", senhaUsuario=" + senhaUsuario + ", cpfUsuario=" + cpfUsuario
-						+ ", sexoUsuario=" + sexoUsuario + "]";
+				return "UsuarioModel [id_Usuario=" + id_Usuario + ", nome_Usuario=" + nome_Usuario + ", email_Usuario="
+						+ email_Usuario + ", senha_Usuario=" + senha_Usuario + ", sexo_Usuario=" + sexo_Usuario
+						+ ", data_De_Cadastro=" + data_De_Cadastro + ", id_Gincana=" + id_Gincana + "]";
 			}
-
+			
+	
 }
